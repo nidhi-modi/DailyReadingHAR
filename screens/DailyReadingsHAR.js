@@ -2039,6 +2039,8 @@ export default class DailyReadingsHAR extends React.Component {
             ) : null}
           </View>
 
+          {this.state.dateyesterday == "" ? null :<Text style={styles.titleHeadingChangeText} onPress={() => this.setState({visibility: true})}>Change Date</Text>}
+
           <DateTimePickerModal
             isVisible={this.state.visibility}
             onConfirm={this.handleConfirm}
@@ -5485,6 +5487,14 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 
+  titleHeadingChangeText: {
+
+    color: '#FF6302',
+    fontSize: 15,
+    marginTop: 5
+    
+  },
+
   titleHeadingTextRed: {
     color: '#ff0000',
     fontSize: 16,
@@ -5534,6 +5544,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
     overflow: 'hidden',
     borderRadius: 8,
+    paddingLeft: 12,
   },
 
   viewBack: {
