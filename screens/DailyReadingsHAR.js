@@ -1472,8 +1472,6 @@ export default class DailyReadingsHAR extends React.Component {
         this.setState({har3northdrainec: '0'});
       }
 
-      //SEND TO REALM
-
       const sendData = {
         site_name: this.state.siteName.toString(),
         currentdate: this.state.currentDate.toString(),
@@ -2039,7 +2037,13 @@ export default class DailyReadingsHAR extends React.Component {
             ) : null}
           </View>
 
-          {this.state.dateyesterday == "" ? null :<Text style={styles.titleHeadingChangeText} onPress={() => this.setState({visibility: true})}>Change Date</Text>}
+          {this.state.dateyesterday == '' ? null : (
+            <Text
+              style={styles.titleHeadingChangeText}
+              onPress={() => this.setState({visibility: true})}>
+              Change Date
+            </Text>
+          )}
 
           <DateTimePickerModal
             isVisible={this.state.visibility}
@@ -5488,11 +5492,9 @@ const styles = StyleSheet.create({
   },
 
   titleHeadingChangeText: {
-
     color: '#FF6302',
     fontSize: 15,
-    marginTop: 5
-    
+    marginTop: 5,
   },
 
   titleHeadingTextRed: {

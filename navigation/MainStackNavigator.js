@@ -29,7 +29,7 @@ function MainStackNavigator() {
         initialRouteName="GetAwsData"
         //initialRouteName="SiteSelection"
         screenOptions={{
-          //gestureEnabled: true,
+          gestureEnabled: false,
           headerStyle: {
             backgroundColor: '#2C903D',
             height: Platform.OS === 'ios' ? 120 : 95,

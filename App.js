@@ -27,8 +27,6 @@ import {
 import MainStackNavigator from './navigation/MainStackNavigator';
 import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
 
-let realm;
-
 //hasura
 
 const Uri = `https://renewing-gopher-49.hasura.app/v1/graphql`;
